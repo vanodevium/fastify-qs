@@ -1,0 +1,40 @@
+{
+  "name": "fastify-qs",
+  "version": "0.0.0",
+  "description": "Fastify plugin for querystring parsing with qs",
+  "main": "plugin.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/webdevium/fastify-qs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/webdevium/fastify-qs/issues"
+  },
+  "homepage": "https://github.com/webdevium/fastify-qs#readme",
+  "author": "Vano Devium <webdevium@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "fastify-plugin": "^1.6.0",
+    "qs": "^6.9.0"
+  },
+  "devDependencies": {
+    "@types/node": "^12.11.1",
+    "fastify": "^2.10.0",
+    "pre-commit": "^1.2.2",
+    "simple-get": "^3.1.0",
+    "snazzy": "^8.0.0",
+    "standard": "^14.3.1",
+    "tap": "^14.8.0"
+  },
+  "scripts": {
+    "test": "tap 'test/**/*.test.js'",
+    "test-ci": "tap --cov 'test/**/*.test.js'",
+    "lint": "standard | snazzy",
+    "lint-ci": "standard"
+  },
+  "precommit": [
+    "lint",
+    "test"
+  ]
+}
