@@ -1,6 +1,6 @@
 {
   "name": "fastify-qs",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Fastify plugin for querystring parsing with qs",
   "main": "plugin.js",
   "repository": {
