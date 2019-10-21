@@ -8,8 +8,9 @@ function plugin (fastify, options, next) {
     if (options && options.disabled) {
       return done()
     }
-    const queryExists = request.raw.url.lastIndexOf('?')
-    const query = queryExists > -1 ? request.raw.url.slice(queryExists + 1) : ''
+    const url = request.raw.url.replace(/\?{2,}/, '?')
+    const queryExists = url.indexOf('?')
+    const query = queryExists > -1 ? url.slice(queryExists + 1) : ''
     request.query = qs.parse(query, options)
     done()
   })

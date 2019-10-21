@@ -10,6 +10,7 @@ const plugin = require('../');
   { options: { disabled: true }, querystring: 'a[]=1&a[]=2', expected: { 'a[]': ['1', '2'] } },
   { options: null, querystring: 'a[b][c]=1&a[b][d]=2', expected: { a: { b: { c: '1', d: '2' } } } },
   { options: null, querystring: 'a=1#hash', expected: { a: '1' } },
+  { options: null, querystring: '???a?=1', expected: { 'a?': '1' } },
   { options: { ignoreQueryPrefix: true }, querystring: '???a', expected: { a: '' } },
   { options: { disabled: true }, querystring: 'a=1#hash', expected: { a: '1' } },
   { options: null, querystring: 'a[]=1&a[]=&a[]=3', expected: { a: ['1', '', '3'] } },
