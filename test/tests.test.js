@@ -15,7 +15,7 @@ const plugin = require('../');
   { options: { disabled: true }, querystring: 'a=1#hash', expected: { a: '1' } },
   { options: null, querystring: 'a[]=1&a[]=&a[]=3', expected: { a: ['1', '', '3'] } },
   { options: null, querystring: null, expected: {} }
-].forEach(function (testData) {
+].forEach(testData => {
   test('parses querystring with qs: ' + testData.querystring, (t) => {
     t.plan(1)
     const fastify = Fastify()
@@ -36,11 +36,12 @@ const plugin = require('../');
       if (err) t.threw(err)
 
       const port = fastify.server.address().port
+      const queryString = testData.querystring ? '?' + testData.querystring : ''
 
       get.concat({
-        url: `http://127.0.0.1:${port}/${testData.querystring ? '?' + testData.querystring : ''}`,
+        url: `http://127.0.0.1:${port}/${queryString}`,
         json: true
-      }, function (err, res, data) {
+      }, (err, res, data) => {
         if (err) {
           t.error(err)
         }

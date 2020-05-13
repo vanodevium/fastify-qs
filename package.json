@@ -1,6 +1,6 @@
 {
   "name": "fastify-qs",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Fastify plugin for querystring parsing with qs",
   "keywords": [
     "fastify",
@@ -17,7 +17,11 @@
     "url": "https://github.com/webdevium/fastify-qs/issues"
   },
   "homepage": "https://github.com/webdevium/fastify-qs#readme",
-  "author": "Vano Devium <webdevium@gmail.com>",
+  "author": {
+    "name": "Vano Devium",
+    "email": "vano.devium@gmail.com",
+    "url": "https://www.devium.me/"
+  },
   "license": "MIT",
   "private": false,
   "dependencies": {

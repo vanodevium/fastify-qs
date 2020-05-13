@@ -1,10 +1,18 @@
 # fastify-qs
 
 [![Build Status](https://travis-ci.org/webdevium/fastify-qs.svg?branch=master)](https://travis-ci.org/webdevium/fastify-qs)
+[![GitHub issues](https://img.shields.io/github/issues/webdevium/fastify-qs)](https://github.com/webdevium/fastify-qs/issues)
+[![GitHub license](https://img.shields.io/github/license/webdevium/fastify-qs)](https://github.com/webdevium/fastify-qs/blob/master/LICENSE.MD)
+[![npm](https://img.shields.io/npm/v/fastify-qs)](https://www.npmjs.com/package/fastify-qs)
 
 A plugin for [Fastify](https://fastify.io/) that adds support for parsing URL query parameters with [qs](https://www.npmjs.com/package/qs).
 
-Plugin accept any options from [qs.parse](https://www.npmjs.com/package/qs#parsing-objects) method
+Plugin accepts any options from [qs.parse](https://www.npmjs.com/package/qs#parsing-objects) method
+
+## Install
+```
+npm i fastify-qs
+```
 
 ## Example
 
