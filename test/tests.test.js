@@ -1,6 +1,6 @@
 'use strict'
 
-const get = require('simple-get')
+const client = require('phin')
 const test = require('tap').test
 const Fastify = require('fastify')
 const plugin = require('../');
@@ -31,22 +31,18 @@ const plugin = require('../');
       reply.send({ query })
     })
 
-    fastify.listen(0, (err) => {
+    fastify.listen(0, async (err) => {
       fastify.server.unref()
       if (err) t.threw(err)
 
       const port = fastify.server.address().port
       const queryString = testData.querystring ? '?' + testData.querystring : ''
 
-      get.concat({
+      const res = await client({
         url: `http://127.0.0.1:${port}/${queryString}`,
-        json: true
-      }, (err, res, data) => {
-        if (err) {
-          t.error(err)
-        }
-        t.same(data.query, testData.expected)
+        parse: 'json'
       })
+      t.same(res.body.query, testData.expected)
     })
 
     t.tearDown(() => fastify.close())
