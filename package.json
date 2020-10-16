@@ -1,6 +1,6 @@
 {
   "name": "fastify-qs",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "private": false,
   "description": "Fastify plugin for querystring parsing with qs",
   "keywords": [
@@ -31,7 +31,7 @@
     "test-ci": "tap --cov 'test/**/*.test.js'"
   },
   "dependencies": {
-    "fastify-plugin": "^2.0.0",
+    "fastify-plugin": "^3.0.0",
     "qs": "^6.9.4"
   },
   "devDependencies": {
