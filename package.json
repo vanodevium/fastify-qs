@@ -35,7 +35,7 @@
     "qs": "^6.9.4"
   },
   "devDependencies": {
-    "@types/node": "^14.0.20",
+    "@types/node": "^15.12.5",
     "fastify": "^3.0.0",
     "phin": "^3.5.0",
     "pre-commit": "^1.2.2",
