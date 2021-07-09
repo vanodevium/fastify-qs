@@ -1,6 +1,6 @@
 {
   "name": "fastify-qs",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "private": false,
   "description": "Fastify plugin for querystring parsing with qs",
   "keywords": [
@@ -20,7 +20,7 @@
   "license": "MIT",
   "author": {
     "name": "Vano Devium",
-    "email": "vano.devium@gmail.com",
+    "email": "vano@devium.me",
     "url": "https://www.devium.me/"
   },
   "main": "plugin.js",
@@ -32,16 +32,16 @@
   },
   "dependencies": {
     "fastify-plugin": "^3.0.0",
-    "qs": "^6.9.4"
+    "qs": "^6.10.1"
   },
   "devDependencies": {
-    "@types/node": "^14.0.20",
-    "fastify": "^3.0.0",
-    "phin": "^3.5.0",
+    "@types/node": "^14.17.5",
+    "fastify": "^3.19.0",
+    "phin": "^3.6.0",
     "pre-commit": "^1.2.2",
-    "snazzy": "^8.0.0",
-    "standard": "^14.3.4",
-    "tap": "^14.10.7"
+    "snazzy": "^9.0.0",
+    "standard": "^16.0.3",
+    "tap": "^15.0.9"
   },
   "precommit": [
     "lint",
