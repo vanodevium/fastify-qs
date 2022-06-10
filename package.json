@@ -1,5 +1,5 @@
 {
-  "name": "fastify-qs",
+  "name": "@nikifilini/fastify-qs",
   "version": "4.0.0",
   "private": false,
   "description": "Fastify plugin for querystring parsing with qs",
@@ -9,13 +9,13 @@
     "qs",
     "querystring"
   ],
-  "homepage": "https://github.com/webdevium/fastify-qs#readme",
+  "homepage": "https://github.com/nikifilini/fastify-qs#readme",
   "bugs": {
-    "url": "https://github.com/webdevium/fastify-qs/issues"
+    "url": "https://github.com/nikifilini/fastify-qs/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/webdevium/fastify-qs.git"
+    "url": "git+ssh://git@github.com/nikifilini/fastify-qs.git"
   },
   "license": "MIT",
   "author": {
