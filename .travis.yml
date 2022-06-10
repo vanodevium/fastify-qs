@@ -1,12 +1,12 @@
 language: node_js
 
 node_js:
-  - "10"
-  - "12"
-  - "14"
-  - "16"
-  - "node"
-  - "lts/*"
+  - '10'
+  - '12'
+  - '14'
+  - '16'
+  - 'node'
+  - 'lts/*'
 
 script:
   - npm run lint-ci

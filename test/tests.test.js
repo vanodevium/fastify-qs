@@ -3,28 +3,46 @@
 const client = require('phin')
 const test = require('tap').test
 const Fastify = require('fastify')
-const plugin = require('../');
+const plugin = require('../')
 
-[
+;[
   { options: {}, querystring: 'a[]=1&a[]=2', expected: { a: ['1', '2'] } },
-  { options: { disabled: true }, querystring: 'a[]=1&a[]=2', expected: { 'a[]': ['1', '2'] } },
-  { options: null, querystring: 'a[b][c]=1&a[b][d]=2', expected: { a: { b: { c: '1', d: '2' } } } },
+  {
+    options: { disabled: true },
+    querystring: 'a[]=1&a[]=2',
+    expected: { 'a[]': ['1', '2'] }
+  },
+  {
+    options: null,
+    querystring: 'a[b][c]=1&a[b][d]=2',
+    expected: { a: { b: { c: '1', d: '2' } } }
+  },
   { options: null, querystring: 'a=1#hash', expected: { a: '1' } },
   { options: null, querystring: '???a?=1', expected: { 'a?': '1' } },
-  { options: { ignoreQueryPrefix: true }, querystring: '???a', expected: { a: '' } },
-  { options: { disabled: true }, querystring: 'a=1#hash', expected: { a: '1' } },
-  { options: null, querystring: 'a[]=1&a[]=&a[]=3', expected: { a: ['1', '', '3'] } },
+  {
+    options: { ignoreQueryPrefix: true },
+    querystring: '???a',
+    expected: { a: '' }
+  },
+  {
+    options: { disabled: true },
+    querystring: 'a=1#hash',
+    expected: { a: '1' }
+  },
+  {
+    options: null,
+    querystring: 'a[]=1&a[]=&a[]=3',
+    expected: { a: ['1', '', '3'] }
+  },
   { options: null, querystring: null, expected: {} }
-].forEach(testData => {
+].forEach((testData) => {
   test('parses querystring with qs: ' + testData.querystring, (t) => {
     t.plan(1)
     const fastify = Fastify()
 
-    fastify
-      .register(plugin, testData.options)
-      .after((err) => {
-        if (err) t.error(err)
-      })
+    fastify.register(plugin, testData.options).after((err) => {
+      if (err) t.error(err)
+    })
 
     fastify.get('/*', (req, reply) => {
       const query = req.query
