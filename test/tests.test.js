@@ -31,7 +31,7 @@ const plugin = require('../');
       reply.send({ query })
     })
 
-    fastify.listen(0, async (err) => {
+    fastify.listen({ port: 0, host: 'localhost' }, async (err) => {
       fastify.server.unref()
       if (err) t.threw(err)
 
@@ -45,6 +45,6 @@ const plugin = require('../');
       t.same(res.body.query, testData.expected)
     })
 
-    t.tearDown(() => fastify.close())
+    t.teardown(() => fastify.close())
   })
 })
