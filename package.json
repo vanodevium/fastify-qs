@@ -24,6 +24,7 @@
     "url": "https://www.devium.me/"
   },
   "main": "plugin.js",
+  "types": "plugin.d.ts",
   "scripts": {
     "lint": "standard | snazzy",
     "lint-ci": "standard",
