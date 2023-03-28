@@ -14,6 +14,11 @@ Plugin accepts any options from [qs.parse](https://www.npmjs.com/package/qs#pars
 npm i fastify-qs
 ```
 
+### Plugin specific options
+- `disabled`: set **true** if you want to disable **qs** parsing
+- `disablePrefixTrim`: this plugin removes all unnecessary **?** from the beginning of the query string,
+  set **true** if you want to disable
+
 ## Example
 
 ```js
@@ -28,6 +33,8 @@ fastify.get('/*', (req, reply) => {
 
 // GET: 'http://127.0.0.1/?a[]=1&a[]=2
 ```
+
+###
 
 > If you want temporary disable qs parsing, pass `disabled: true` to plugin options:
 > ```
