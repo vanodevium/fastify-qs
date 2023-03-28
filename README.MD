@@ -1,6 +1,6 @@
 # fastify-qs
 
-[![Build Status](https://api.travis-ci.com/vanodevium/fastify-qs.svg?branch=master)](https://travis-ci.com/github/vanodevium/fastify-qs)
+![Build Status](https://img.shields.io/github/actions/workflow/status/vanodevium/fastify-qs/ci.yaml)
 [![GitHub issues](https://img.shields.io/github/issues/vanodevium/fastify-qs)](https://github.com/vanodevium/fastify-qs/issues)
 [![GitHub license](https://img.shields.io/github/license/vanodevium/fastify-qs)](https://github.com/vanodevium/fastify-qs/blob/master/LICENSE.MD)
 [![npm](https://img.shields.io/npm/v/fastify-qs)](https://www.npmjs.com/package/fastify-qs)
