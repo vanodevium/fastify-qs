@@ -31,15 +31,14 @@ const plugin = require('../');
       reply.send({ query })
     })
 
-    fastify.listen({ port: 0 }, async (err) => {
+    fastify.listen({ port: 0, host: '::' }, async (err, address) => {
       fastify.server.unref()
       if (err) t.threw(err)
 
-      const port = fastify.server.address().port
       const queryString = testData.querystring ? '?' + testData.querystring : ''
 
       const res = await client({
-        url: `http://0.0.0.0:${port}/${queryString}`,
+        url: address + `/${queryString}`,
         parse: 'json'
       })
       t.same(res.body.query, testData.expected)
