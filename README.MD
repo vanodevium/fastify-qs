@@ -9,6 +9,10 @@ A plugin for [Fastify](https://fastify.io/) that adds support for parsing URL qu
 
 Plugin accepts any options from [qs.parse](https://www.npmjs.com/package/qs#parsing-objects) method
 
+> This plugin removes all unnecessary **?** from the beginning of the query string.
+>
+> This behavior can be disabled with **disablePrefixTrim** option.
+
 ## Install
 ```
 npm i fastify-qs
@@ -16,8 +20,7 @@ npm i fastify-qs
 
 ### Plugin specific options
 - `disabled`: set **true** if you want to disable **qs** parsing
-- `disablePrefixTrim`: this plugin removes all unnecessary **?** from the beginning of the query string,
-  set **true** if you want to disable
+- `disablePrefixTrim`: set **true** if you want to disable
 
 ## Example
 
