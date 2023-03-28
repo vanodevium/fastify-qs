@@ -39,7 +39,7 @@ const plugin = require('../');
       const queryString = testData.querystring ? '?' + testData.querystring : ''
 
       const res = await client({
-        url: `http://127.0.0.1:${port}/${queryString}`,
+        url: `http://0.0.0.0:${port}/${queryString}`,
         parse: 'json'
       })
       t.same(res.body.query, testData.expected)
