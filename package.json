@@ -26,9 +26,9 @@
   "main": "plugin.js",
   "types": "plugin.d.ts",
   "scripts": {
-    "lint": "prettier --check test plugin.d.ts plugin.js",
-    "fix": "prettier --write test plugin.d.ts plugin.js",
-    "test": "tap 'test/**/*.test.js'"
+    "lint": "prettier --check tests plugin.d.ts plugin.js",
+    "fix": "prettier --write tests plugin.d.ts plugin.js",
+    "test": "tap 'tests/**/*.test.js'"
   },
   "dependencies": {
     "fastify-plugin": "^4.5.0",
