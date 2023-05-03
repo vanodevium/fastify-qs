@@ -25,9 +25,14 @@
   },
   "main": "plugin.js",
   "types": "plugin.d.ts",
+  "files": [
+    "plugin.*",
+    "*.MD",
+    "package.json"
+  ],
   "scripts": {
-    "lint": "prettier --check tests plugin.d.ts plugin.js",
     "fix": "prettier --write tests plugin.d.ts plugin.js",
+    "lint": "prettier --check tests plugin.d.ts plugin.js",
     "test": "tap 'tests/**/*.test.js'"
   },
   "dependencies": {
