@@ -36,16 +36,16 @@
     "test": "tap 'tests/**/*.test.js'"
   },
   "dependencies": {
-    "fastify-plugin": "^4.5.0",
-    "qs": "^6.11.1"
+    "fastify-plugin": "^4.5.1",
+    "qs": "^6.11.2"
   },
   "devDependencies": {
-    "@types/node": "^18.16.3",
-    "fastify": "^4.17.0",
+    "@types/node": "^20.4.8",
+    "fastify": "^4.21.0",
     "phin": "^3.7.0",
     "pre-commit": "^1.2.2",
-    "prettier": "2.8.8",
-    "tap": "^16.3.4"
+    "prettier": "3.0.1",
+    "tap": "^16.3.8"
   },
   "precommit": [
     "lint",
