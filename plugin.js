@@ -6,19 +6,21 @@ const qs = require("qs");
 const packageJson = require("./package.json");
 
 const plugin = (fastify, options, next) => {
+  options = Object.assign({}, options);
+
   fastify.addHook("onRequest", (request, reply, done) => {
-    if (options && options.disabled) {
+    if (options.disabled) {
       return done();
     }
+
     const rawUrl = request.raw.url;
-    let url = rawUrl;
-    if (!(options && options.disablePrefixTrim)) {
-      url = rawUrl.replace(/\?{2,}/, "?");
-    }
-    const querySymbolIndex = url.indexOf("?");
-    const query =
-      querySymbolIndex !== -1 ? url.slice(querySymbolIndex + 1) : "";
-    request.query = qs.parse(query, options);
+    const url = options.disablePrefixTrim
+      ? rawUrl
+      : rawUrl.replace(/\?{2,}/, "?");
+
+    const position = 1 + url.indexOf("?");
+    request.query = qs.parse(position ? url.slice(position) : "", options);
+
     done();
   });
   next();
