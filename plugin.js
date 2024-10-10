@@ -3,8 +3,6 @@
 const fp = require("fastify-plugin");
 const qs = require("qs");
 
-const packageJson = require("./package.json");
-
 const plugin = (fastify, options, next) => {
   options = Object.assign({}, options);
 
@@ -28,5 +26,5 @@ const plugin = (fastify, options, next) => {
 
 module.exports = fp(plugin, {
   fastify: "^5.0.0",
-  name: packageJson.name,
+  name: "fastify-qs",
 });

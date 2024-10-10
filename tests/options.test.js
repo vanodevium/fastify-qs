@@ -52,7 +52,7 @@ const plugin = require("../");
     expected: { a: "" },
   },
 ].forEach((testData) => {
-  test("parses querystring with qs: " + testData.querystring, (t) => {
+  test(`parses querystring with qs: ${testData.querystring}`, (t) => {
     t.plan(1);
     const fastify = Fastify();
 
@@ -74,7 +74,7 @@ const plugin = require("../");
         : "";
 
       const res = await client({
-        url: address + `/${queryString}`,
+        url: `${address}/${queryString}`,
         parse: "json",
       });
       t.same(res.body.query, testData.expected);

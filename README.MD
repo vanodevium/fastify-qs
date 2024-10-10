@@ -39,4 +39,4 @@ fastify.get('/*', (req, reply) => {
 
 ## License
 
-[MIT](./LICENSE.MD) © [Vano Devium](https://www.devium.me/)
+[MIT](./LICENSE.MD) © [Vano Devium](https://devium.me/)

@@ -21,7 +21,7 @@
   "author": {
     "name": "Vano Devium",
     "email": "vano@devium.me",
-    "url": "https://www.devium.me/"
+    "url": "https://devium.me/"
   },
   "main": "plugin.js",
   "types": "plugin.d.ts",
