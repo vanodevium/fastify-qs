@@ -23,7 +23,15 @@
     "email": "vano@devium.me",
     "url": "https://www.devium.me/"
   },
+  "exports": {
+    ".": {
+      "require": "./plugin.js",
+      "import": "./plugin.mjs",
+      "types": "./plugin.d.ts"
+    }
+  },
   "main": "plugin.js",
+  "module": "plugin.mjs",
   "types": "plugin.d.ts",
   "files": [
     "plugin.*",
@@ -31,9 +39,9 @@
     "package.json"
   ],
   "scripts": {
-    "fix": "prettier --write tests plugin.d.ts plugin.js",
-    "lint": "prettier --check tests plugin.d.ts plugin.js",
-    "test": "tap 'tests/**/*.test.js'"
+    "fix": "prettier --write tests plugin.*",
+    "lint": "prettier --check tests plugin.*",
+    "test": "tap 'tests/**/*.test.*js'"
   },
   "dependencies": {
     "fastify-plugin": "^5.0.1",

@@ -1,7 +1,5 @@
-"use strict";
-
-const fp = require("fastify-plugin");
-const qs = require("qs");
+import { fastifyPlugin } from "fastify-plugin";
+import { parse } from "qs";
 
 const plugin = (fastify, options, next) => {
   fastify.addHook("onRequest", (request, reply, done) => {
@@ -16,13 +14,13 @@ const plugin = (fastify, options, next) => {
     const querySymbolIndex = url.indexOf("?");
     const query =
       querySymbolIndex !== -1 ? url.slice(querySymbolIndex + 1) : "";
-    request.query = qs.parse(query, options);
+    request.query = parse(query, options);
     done();
   });
   next();
 };
 
-module.exports = fp(plugin, {
+export default fastifyPlugin(plugin, {
   fastify: "^5.0.0",
   name: "fastify-qs",
 });
