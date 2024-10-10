@@ -1,8 +1,9 @@
 "use strict";
 
-const packageJson = require("./package.json");
 const fp = require("fastify-plugin");
 const qs = require("qs");
+
+const packageJson = require("./package.json");
 
 const plugin = (fastify, options, next) => {
   fastify.addHook("onRequest", (request, reply, done) => {
@@ -24,6 +25,6 @@ const plugin = (fastify, options, next) => {
 };
 
 module.exports = fp(plugin, {
-  fastify: "^4.0.0",
+  fastify: "^5.0.0",
   name: packageJson.name,
 });

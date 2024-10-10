@@ -1,6 +1,6 @@
 {
   "name": "fastify-qs",
-  "version": "4.0.2",
+  "version": "5.0.0",
   "private": false,
   "description": "Fastify plugin for querystring parsing with qs",
   "keywords": [
@@ -36,16 +36,16 @@
     "test": "tap 'tests/**/*.test.js'"
   },
   "dependencies": {
-    "fastify-plugin": "^4.5.1",
-    "qs": "^6.11.2"
+    "fastify-plugin": "^5.0.1",
+    "qs": "^6.13.0"
   },
   "devDependencies": {
-    "@types/node": "^20.4.8",
-    "fastify": "^4.21.0",
-    "phin": "^3.7.0",
+    "@types/node": "^22.7.5",
+    "fastify": "^5.0.0",
+    "phin": "^3.7.1",
     "pre-commit": "^1.2.2",
-    "prettier": "3.0.1",
-    "tap": "^16.3.8"
+    "prettier": "3.3.3",
+    "tap": "^21.0.1"
   },
   "precommit": [
     "lint",

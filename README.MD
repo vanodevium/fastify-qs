@@ -2,7 +2,7 @@
 
 ![Build Status](https://img.shields.io/github/actions/workflow/status/vanodevium/fastify-qs/ci.yaml)
 [![GitHub issues](https://img.shields.io/github/issues/vanodevium/fastify-qs)](https://github.com/vanodevium/fastify-qs/issues)
-[![GitHub license](https://img.shields.io/github/license/vanodevium/fastify-qs)](https://github.com/vanodevium/fastify-qs/blob/master/LICENSE.MD)
+[![GitHub license](https://img.shields.io/github/license/vanodevium/fastify-qs)](https://github.com/vanodevium/fastify-qs/blob/main/LICENSE.MD)
 [![npm](https://img.shields.io/npm/v/fastify-qs)](https://www.npmjs.com/package/fastify-qs)
 
 A plugin for [Fastify](https://fastify.io/) that adds support for parsing URL query parameters with [qs](https://www.npmjs.com/package/qs).
